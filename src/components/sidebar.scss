@@ -1,0 +1,32 @@
+.menu-list {
+  width: 280px;
+  background: #f9f9f9;
+  height: 100%;
+
+  .thingy {
+    text-align: left;
+    margin: 0px 25px 25px 25px;
+    padding-top: 25px;
+
+    h3 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 13px;
+      width: 200px;
+    }
+  }
+
+  a {
+    text-align: left;
+  }
+
+  a.is-active {
+    opacity: .4;
+  }
+
+  div {
+    margin-left: 10px;
+  }
+}
