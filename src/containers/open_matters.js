@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import SideBar from '../../components/sidebar.js'
+import SideBar from '../components/sidebar.js'
 import {
   Route,
   Switch
 } from 'react-router-dom'
 
-import AllMatters from './all_matters.js'
+import Matters from './matters.js'
 
 class OpenMatters extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class OpenMatters extends Component {
         {
           name: 'All',
           isActive: '',
-          path: 'OpenMatters/all'
+          path: 'all'
         },
         { name: 'Ready',
           isActive: '',
@@ -38,16 +38,24 @@ class OpenMatters extends Component {
 
   render() {
     return (
-      <div>
-       <SideBar menuItems={this.state.menuItems}
-                setActive={this.setActive.bind(this)}/>
+      <div className="columns is-gapless">
 
-       <Switch>
-        <Route path="/OpenMatters/all" component={AllMatters}/>
-       </Switch>
+       <div className="column is-2">
+         <SideBar menuItems={this.state.menuItems}
+                  setActive={this.setActive.bind(this)}/>
+       </div>
+
+       <div className="column is-10">
+        <Matters/>
+       </div>
+
       </div>
     );
   }
 }
 
 export default OpenMatters;
+
+//  <Switch>
+//   <Route path="/OpenMatters/all" component={AllMatters}/>
+//  </Switch>

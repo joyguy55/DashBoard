@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SideBar from '../../components/sidebar.js'
+import SideBar from '../components/sidebar.js'
 
 class ClosedMatters extends Component {
   constructor(props) {
@@ -13,11 +13,11 @@ class ClosedMatters extends Component {
        },
        { name: 'Ready',
          isActive: '',
-         path: 'ready'
+         path: 'OpenMatters/ready'
        },
        { name: 'Pending',
          isActive: '',
-         path: 'pending'
+         path: 'OpenMatters/pending'
        }
       ]
     };
