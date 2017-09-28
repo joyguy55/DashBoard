@@ -1,9 +1,10 @@
 import React from 'react';
 import './sidebar.scss';
+import { Link } from 'react-router-dom'
 
 const SideBar = (props) => {
   return (
-    <div>
+    <div style={{ display: 'inline-block', float: 'left'}}>
       <ul className="menu-list">
 
       <div className="thingy">
@@ -16,7 +17,9 @@ const SideBar = (props) => {
             return(
               <li key={index}
                   onClick={()=>{props.setActive(index)}}>
-                  <a className={item.isActive}><div>{ item.name }</div></a>
+                  <Link className={item.isActive} to={item.path}>
+                   <div>{ item.name }</div>
+                  </Link>
               </li>
             )
           })

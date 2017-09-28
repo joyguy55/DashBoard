@@ -8,12 +8,19 @@ class DashBoard extends Component {
     super(props);
     this.state = {
       menuItems : [
-        { name: 'Ready',
-          isActive: '',
-        },
-        { name: 'Pending',
-          isActive: '',
-        }
+       {
+         name: 'All',
+         isActive: '',
+         path: 'OpenMatters/all'
+       },
+       { name: 'Ready',
+         isActive: '',
+         path: 'ready'
+       },
+       { name: 'Pending',
+         isActive: '',
+         path: 'pending'
+       }
       ]
     };
   }
