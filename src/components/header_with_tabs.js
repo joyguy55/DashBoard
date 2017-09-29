@@ -1,8 +1,8 @@
 import React from 'react';
-import './sidebar.scss';
 import { Link } from 'react-router-dom'
+import './header_with_tabs.scss'
 
-const Head = (props) => {
+const HeaderWithTabs = (props) => {
   return (
     <section>
       <div className="hero-body">
@@ -31,4 +31,4 @@ const Head = (props) => {
   );
 }
 
-export default Head;
+export default HeaderWithTabs;

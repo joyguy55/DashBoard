@@ -39,16 +39,9 @@ class OpenMatters extends Component {
   render() {
     return (
       <div className="columns is-gapless">
-
-       <div className="column is-2">
          <SideBar menuItems={this.state.menuItems}
                   setActive={this.setActive.bind(this)}/>
-       </div>
-
-       <div className="column is-10">
-        <Matters/>
-       </div>
-
+         <Matters/>
       </div>
     );
   }

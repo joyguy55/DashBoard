@@ -4,8 +4,10 @@ import {
   Switch
 } from 'react-router-dom'
 
-import SideBar from '../../components/sidebar.js'
-import Head from '../../components/head.js'
+import SideBar from '../../components/sidebar'
+import HeaderWithTabs from '../../components/header_with_tabs'
+import Overview from './subb/overview'
+import Form from './suba/subForm.js'
 
 class Matter extends Component {
   constructor(props) {
@@ -43,14 +45,22 @@ class Matter extends Component {
     return (
       <div className="columns is-gapless">
 
-       <div className="column is-2">
-         <SideBar menuItems={this.state.menuItems}
-                  setActive={this.setActive.bind(this)}/>
-       </div>
+        <SideBar menuItems={this.state.menuItems}
+                 setActive={this.setActive.bind(this)}/>
 
-       <div className="column is-10">
-         <Head/>
-       </div>
+        <div className="column is-10">
+
+          <HeaderWithTabs/>
+
+          <Switch>
+           <Route path="/Matter" component={Form}/>
+          </Switch>
+
+          <Switch>
+           <Route path="/Matter" component={Overview}/>
+          </Switch>
+
+        </div>
 
       </div>
     );

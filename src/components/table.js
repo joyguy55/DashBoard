@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Table = (props) => {
   return (
+    <div className="column is-10">
      <table className="table">
        <thead>
          <tr>
@@ -30,6 +31,7 @@ const Table = (props) => {
          </tr>
        </tbody>
      </table>
+    </div>
   );
 }
 

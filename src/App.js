@@ -17,9 +17,8 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
+        <div>
           <Header/>
-
           <Switch>
             <Route exact path="/" component={DashBoard}/>
             <Route path="/OpenMatters" component={OpenMatters}/>

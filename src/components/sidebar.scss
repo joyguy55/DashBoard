@@ -1,30 +1,40 @@
-.menu-list {
+.is-2{
+  height: 93vh;
   background: #f9f9f9;
 
-  .thingy {
-    text-align: left;
-    margin: 0px 25px 25px 25px;
-    padding-top: 25px;
+  ::-webkit-scrollbar {
+      display: none;
+  }
 
-    h3 {
-      font-size: 18px;
+  .menu-list {
+
+    .thingy {
+      text-align: left;
+      margin: 0px 25px 25px 25px;
+      padding-top: 25px;
+
+      h3 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 13px;
+        min-width: 100px;
+        max-width: 170px;
+      }
     }
 
-    p {
-      font-size: 13px;
-      min-width: 100px;
+    a {
+      text-align: left;
+    }
+
+    a.is-active {
+      opacity: .4;
+    }
+
+    div {
+      margin-left: 10px;
     }
   }
 
-  a {
-    text-align: left;
-  }
-
-  a.is-active {
-    opacity: .4;
-  }
-
-  div {
-    margin-left: 10px;
-  }
 }

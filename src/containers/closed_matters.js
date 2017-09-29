@@ -32,7 +32,7 @@ class ClosedMatters extends Component {
 
   render() {
     return (
-      <div>
+      <div className="columns is-gapless">
         <SideBar menuItems={this.state.menuItems}
                  setActive={this.setActive.bind(this)}/>
       </div>
