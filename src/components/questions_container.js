@@ -14,13 +14,13 @@ const questions = [
 const QuestionsContainer = (props) => {
   return (
     <div className="question_box">
+     <h4>THINGS</h4>
       {
         questions.map((question)=>{
           return(
             <div className="box">
               <article className="media">
-                <div className="check_box">
-                </div>
+                <div className="check_box"></div>
                 <div className="media-content">
                   <div className="content">
                     <p>

@@ -14,21 +14,29 @@ class Matter extends Component {
     super(props);
     this.state = {
       menuItems : [
-        { name: 'Injury',
+        { name: 'Summary',
           isActive: '',
-          path: 'injury'
+          path: ''
         },
-        { name: 'Thing',
+        { name: 'Matter Info',
           isActive: '',
-          path: 'thing'
+          path: ''
         },
-        { name: 'Thing2',
+        { name: 'Incident Info',
           isActive: '',
-          path: 'thing2'
+          path: ''
         },
-        { name: 'Thing3',
+        { name: 'Injured Party',
           isActive: '',
-          path: 'thing3'
+          path: ''
+        },
+        { name: 'Injury Info',
+          isActive: '',
+          path: ''
+        },
+        { name: 'Demand Info',
+          isActive: '',
+          path: ''
         }
       ]
     };
@@ -53,11 +61,11 @@ class Matter extends Component {
           <HeaderWithTabs/>
 
           <Switch>
-           <Route path="/Matter" component={Form}/>
+           <Route path="/Matter" component={Overview}/>
           </Switch>
 
           <Switch>
-           <Route path="/Matter" component={Overview}/>
+           <Route path="/Matter" component={Form}/>
           </Switch>
 
         </div>

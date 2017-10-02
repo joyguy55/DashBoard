@@ -9,7 +9,7 @@ const SideBar = (props) => {
 
       <div className="thingy">
         <h3>Some text</h3>
-        <p>lorem ipsum. Maybe some random text here for the really really though</p>
+        <p>lorem ipsum. Maybe some random text here. Possibly info regarding current case that way I know where I am at :)</p>
       </div>
 
         {
