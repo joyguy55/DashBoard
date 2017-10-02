@@ -4,8 +4,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
-import 'bulma/css/bulma.css'
-import './App.scss';
+import './base.scss'
 
 import Header from './containers/header'
 import DashBoard from './containers/dash_board.js'

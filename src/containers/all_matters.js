@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Form from '../../../components/form'
+import Table from '../components/table.js'
 
-class subForm extends Component {
+class AllMatters extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -10,9 +10,9 @@ class subForm extends Component {
 
   render() {
     return (
-      <Form/>
+       <Table />
     );
   }
 }
 
-export default subForm;
+export default AllMatters;

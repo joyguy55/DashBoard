@@ -5,9 +5,12 @@ import {
 } from 'react-router-dom'
 
 import SideBar from '../../components/sidebar'
-import HeaderWithTabs from '../../components/header_with_tabs'
-import Overview from './subb/overview'
-import Form from './suba/subForm.js'
+import Summary from './categories/summary'
+import MatterInfo from './categories/matter_info'
+import IncidentInfo from './categories/incident_info'
+import InjuredParty from './categories/injured_party'
+import InjuryInfo from './categories/injury_info'
+import DemandInfo from './categories/demand_info'
 
 class Matter extends Component {
   constructor(props) {
@@ -15,28 +18,28 @@ class Matter extends Component {
     this.state = {
       menuItems : [
         { name: 'Summary',
-          isActive: '',
-          path: ''
+          isActive: 'is-active',
+          path: '/Matter/Summary'
         },
         { name: 'Matter Info',
           isActive: '',
-          path: ''
+          path: '/Matter/MatterInfo'
         },
         { name: 'Incident Info',
           isActive: '',
-          path: ''
+          path: '/Matter/IncidentInfo'
         },
         { name: 'Injured Party',
           isActive: '',
-          path: ''
+          path: '/Matter/InjuredParty'
         },
         { name: 'Injury Info',
           isActive: '',
-          path: ''
+          path: '/Matter/InjuryInfo'
         },
         { name: 'Demand Info',
           isActive: '',
-          path: ''
+          path: '/Matter/DemandInfo'
         }
       ]
     };
@@ -56,19 +59,14 @@ class Matter extends Component {
         <SideBar menuItems={this.state.menuItems}
                  setActive={this.setActive.bind(this)}/>
 
-        <div className="column is-10">
-
-          <HeaderWithTabs/>
-
-          <Switch>
-           <Route path="/Matter" component={Overview}/>
-          </Switch>
-
-          <Switch>
-           <Route path="/Matter" component={Form}/>
-          </Switch>
-
-        </div>
+        <Switch>
+         <Route path="/Matter/Summary" component={Summary}/>
+         <Route path="/Matter/MatterInfo" component={MatterInfo}/>
+         <Route path="/Matter/IncidentInfo" component={IncidentInfo}/>
+         <Route path="/Matter/InjuredParty" component={InjuredParty}/>
+         <Route path="/Matter/InjuryInfo" component={InjuryInfo}/>
+         <Route path="/Matter/DemandInfo" component={DemandInfo}/>
+        </Switch>
 
       </div>
     );

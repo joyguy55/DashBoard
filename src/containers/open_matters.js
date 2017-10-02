@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import SideBar from '../components/sidebar.js'
-import {
-  Route,
-  Switch
-} from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
-import Matters from './matters.js'
+import AllMatters from './all_matters.js'
 
 class OpenMatters extends Component {
   constructor(props) {
@@ -41,14 +38,10 @@ class OpenMatters extends Component {
       <div className="columns is-gapless">
          <SideBar menuItems={this.state.menuItems}
                   setActive={this.setActive.bind(this)}/>
-         <Matters/>
+         <AllMatters/>
       </div>
     );
   }
 }
 
 export default OpenMatters;
-
-//  <Switch>
-//   <Route path="/OpenMatters/all" component={AllMatters}/>
-//  </Switch>

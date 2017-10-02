@@ -4,10 +4,12 @@ import './form.scss';
 const Form = (props) => {
   return (
     <div className="form">
-      <div className="field">
+
+      <p>This is your question african or euoropean?</p>
+
+      <div className="field  radios">
         <div className="control">
-          <p>This is your question african or euoropean?</p>
-          <label className="radio">
+          <label className="radio first">
             <input type="radio" name="question"/>
             Yes
           </label>
@@ -34,7 +36,7 @@ const Form = (props) => {
 
       <div className="field is-grouped">
         <div className="control">
-          <button className="button is-primary">Submit</button>
+          <button className="button is-info">Submit</button>
         </div>
         <div className="control">
           <button className="button is-link">Cancel</button>

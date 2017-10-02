@@ -14,7 +14,7 @@ const questions = [
 const QuestionsContainer = (props) => {
   return (
     <div className="question_box">
-     <h4>THINGS</h4>
+     <div className="question_list">THINGS</div>
       {
         questions.map((question)=>{
           return(

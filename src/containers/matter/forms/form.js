@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Table from '../components/table.js'
+import Form from '../../../components/form'
 
-class Matters extends Component {
+class FormContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -10,9 +10,9 @@ class Matters extends Component {
 
   render() {
     return (
-       <Table />
+      <Form/>
     );
   }
 }
 
-export default Matters;
+export default FormContainer;

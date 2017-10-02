@@ -1,0 +1,10 @@
+@import "~bulma/sass/utilities/initial-variables";
+
+$info: #f04b4c;
+$primary: #3d6098;
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@import "~bulma/bulma.sass"
