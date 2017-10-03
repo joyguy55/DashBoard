@@ -15,8 +15,8 @@ class Header extends Component {
 
         <div className="navbar-menu">
           <div className="navbar-start">
-            <Link className="navbar-item" to="/OpenMatters">OpenMatters</Link>
-            <Link className="navbar-item" to="/ClosedMatters">ClosedMatters</Link>
+            <Link className="navbar-item" to="/OpenMatters">Open Matters</Link>
+            <Link className="navbar-item" to="/ClosedMatters">Closed Matters</Link>
           </div>
 
           <div className="navbar-end">

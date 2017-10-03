@@ -5,16 +5,17 @@ import {
 } from 'react-router-dom'
 
 import SideBar from '../../components/sidebar'
-import Summary from './categories/summary'
-import MatterInfo from './categories/matter_info'
-import IncidentInfo from './categories/incident_info'
-import InjuredParty from './categories/injured_party'
-import InjuryInfo from './categories/injury_info'
-import DemandInfo from './categories/demand_info'
+
+import Summary from './categories/summary/summary'
+import MatterInfo from './categories/matterinfo/matterInfo'
+import IncidentInfo from './categories/incidentinfo/incidentInfo'
+import InjuredParty from './categories/injuredparty/injuredParty'
+import InjuryInfo from './categories/injuryinfo/injuryInfo'
+import DemandInfo from './categories/demandinfo/demandInfo'
 
 class Matter extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+   super();
     this.state = {
       menuItems : [
         { name: 'Summary',
