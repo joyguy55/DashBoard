@@ -4,10 +4,20 @@ import QuestionsContainer from '../../../components/questions_container'
 import HeaderWithTabs from '../../../components/header_with_tabs'
 import Form from '../forms/form.js'
 
-class Summary extends Component {
+class IncidentInfo extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      tabs: [
+        { name: 'Incident Info', isActive: 'is-active'},
+        { name: 'Collision Report', isActive: ''},
+        { name: 'Circumstance\'s', isActive: ''},
+        { name: 'Timeline', isActive: ''},
+      ],
+      questions: [
+        { name: 'Info'},
+        { name: 'Description'}
+      ]
     };
   }
 
@@ -15,12 +25,12 @@ class Summary extends Component {
     return (
       <div className="column is-10">
 
-        <HeaderWithTabs/>
+        <HeaderWithTabs title={'Incident Info'} tabs={this.state.tabs} />
 
-        <QuestionsContainer/>
+        <QuestionsContainer questions={this.state.questions}/>
 
         <Switch>
-         <Route path="/MatterSummary" component={Form}/>
+         <Route path="/Matter/IncidentInfo" component={Form}/>
         </Switch>
 
       </div>
@@ -28,4 +38,4 @@ class Summary extends Component {
   }
 }
 
-export default Summary;
+export default IncidentInfo;

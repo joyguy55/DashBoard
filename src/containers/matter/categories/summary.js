@@ -8,6 +8,16 @@ class Summary extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      tabs: [
+        { name: 'Incident Info', isActive: 'is-active'},
+        { name: 'Collision Report', isActive: ''},
+        { name: 'Circumstance\'s', isActive: ''},
+        { name: 'Timeline', isActive: ''},
+      ],
+      questions: [
+        { name: 'Info'},
+        { name: 'Description'}
+      ]
     };
   }
 
@@ -15,9 +25,9 @@ class Summary extends Component {
     return (
       <div className="column is-10">
 
-        <HeaderWithTabs/>
+        <HeaderWithTabs title={'Summary'} tabs={this.state.tabs}/>
 
-        <QuestionsContainer/>
+        <QuestionsContainer questions={this.state.questions}/>
 
         <Switch>
          <Route path="/Matter/Summary" component={Form}/>

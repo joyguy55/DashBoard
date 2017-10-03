@@ -18,46 +18,32 @@ class Matter extends Component {
     this.state = {
       menuItems : [
         { name: 'Summary',
-          isActive: 'is-active',
           path: '/Matter/Summary'
         },
         { name: 'Matter Info',
-          isActive: '',
           path: '/Matter/MatterInfo'
         },
         { name: 'Incident Info',
-          isActive: '',
           path: '/Matter/IncidentInfo'
         },
         { name: 'Injured Party',
-          isActive: '',
           path: '/Matter/InjuredParty'
         },
         { name: 'Injury Info',
-          isActive: '',
           path: '/Matter/InjuryInfo'
         },
         { name: 'Demand Info',
-          isActive: '',
           path: '/Matter/DemandInfo'
         }
       ]
     };
   }
 
-  setActive(index) {
-    const items = this.state.menuItems;
-    items.map((item) => { item.isActive = ''})
-    items[index].isActive = 'is-active'
-    this.setState({  menuItems: items })
-  }
-
   render() {
     return (
       <div className="columns is-gapless">
 
-        <SideBar menuItems={this.state.menuItems}
-                 setActive={this.setActive.bind(this)}/>
+        <SideBar menuItems={this.state.menuItems} />
 
         <Switch>
          <Route path="/Matter/Summary" component={Summary}/>

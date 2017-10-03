@@ -19,7 +19,7 @@ const Table = (props) => {
        </thead>
        <tbody>
          <tr>
-           <Link to="/Matter/Summary">
+           <Link to="/Matter/IncidentInfo">
             <th>01/23/2016</th>
            </Link>
            <td>Spencer J White Sr.</td>

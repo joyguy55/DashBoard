@@ -8,7 +8,7 @@ const HeaderWithTabs = (props) => {
       <div className="hero-body">
         <div className="container">
           <h1 className="title">
-            Overview
+            { props.title }
           </h1>
         </div>
       </div>
@@ -17,12 +17,15 @@ const HeaderWithTabs = (props) => {
         <nav className="tabs is-boxed">
           <div className="container">
             <ul>
-              <li className="is-active"><a>Overview</a></li>
-              <li><a>Modifiers</a></li>
-              <li><a>Grid</a></li>
-              <li><a>Elements</a></li>
-              <li><a>Components</a></li>
-              <li><a>Layout</a></li>
+             {
+               props.tabs.map((tab)=>{
+                 return(
+                   <li className={tab.isActive}>
+                    <Link to={tab.name}>{tab.name}</Link>
+                   </li>
+                 )
+               })
+             }
             </ul>
           </div>
         </nav>

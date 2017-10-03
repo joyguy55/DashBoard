@@ -4,10 +4,19 @@ import QuestionsContainer from '../../../components/questions_container'
 import HeaderWithTabs from '../../../components/header_with_tabs'
 import Form from '../forms/form.js'
 
-class Summary extends Component {
+class DemandInfo extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      tabs: [
+        { name: 'Demand Info', isActive: 'is-active'},
+        { name: 'Legal Research', isActive: ''},
+        { name: 'Legal Analysis', isActive: ''},
+      ],
+      questions: [
+        { name: 'Info'},
+        { name: 'Description'}
+      ]
     };
   }
 
@@ -15,9 +24,9 @@ class Summary extends Component {
     return (
       <div className="column is-10">
 
-        <HeaderWithTabs/>
+        <HeaderWithTabs title={'Demand Info'} tabs={this.state.tabs}/>
 
-        <QuestionsContainer/>
+        <QuestionsContainer questions={this.state.questions}/>
 
         <Switch>
          <Route path="/MatterSummary" component={Form}/>
@@ -28,4 +37,4 @@ class Summary extends Component {
   }
 }
 
-export default Summary;
+export default DemandInfo;

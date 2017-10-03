@@ -5,6 +5,12 @@ const Form = (props) => {
   return (
     <div className="form">
 
+      <p className="panel-tabs">
+        <a className="is-active">Form</a>
+        <a>Summary</a>
+        <a>Documents</a>
+      </p>
+
       <p>This is your question african or euoropean?</p>
 
       <div className="field  radios">

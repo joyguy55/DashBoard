@@ -3,6 +3,16 @@
   width: 500px;
   padding: 30px;
 
+  .panel-tabs {
+    margin-bottom: 30px;
+    border: none !important;
+
+    a {
+      margin-right: 15px;
+    }
+
+  }
+
   p {
     font-size: 15px;
     display: inline-block;

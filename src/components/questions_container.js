@@ -14,9 +14,9 @@ const questions = [
 const QuestionsContainer = (props) => {
   return (
     <div className="question_box">
-     <div className="question_list">THINGS</div>
+     <div className="question_list">SECTION</div>
       {
-        questions.map((question)=>{
+        props.questions.map((question)=>{
           return(
             <div className="box">
               <article className="media">
@@ -24,7 +24,7 @@ const QuestionsContainer = (props) => {
                 <div className="media-content">
                   <div className="content">
                     <p>
-                      Short thing
+                      {question.name}
                     </p>
                   </div>
                 </div>
